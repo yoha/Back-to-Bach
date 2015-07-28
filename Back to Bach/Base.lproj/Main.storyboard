@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A225f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-LightOblique</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Back_to_Bach" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +23,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1w-SW-NuF">
+                                <rect key="frame" x="300" y="371" width="280" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPauseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Joq-1x-BS0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-vv-GjX">
+                                <rect key="frame" x="20" y="371" width="280" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qd-QN-h93"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9SW-oQ-iT4">
+                                <rect key="frame" x="18" y="430" width="564" height="31"/>
+                                <animations/>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="Wx8-YJ-ScP">
+                                <rect key="frame" x="180" y="49" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="EVN-Id-ibq"/>
+                                    <constraint firstAttribute="width" constant="240" id="kua-n7-61J"/>
+                                    <constraint firstAttribute="width" secondItem="Wx8-YJ-ScP" secondAttribute="height" multiplier="1:1" id="t8A-tv-wdJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5d-J1-m1X">
+                                <rect key="frame" x="20" y="318" width="560" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“you and I have memories longer than the road that stretches out ahead.&quot; - The Beatles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esr-FU-mEO">
+                                <rect key="frame" x="20" y="560" width="560" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9SW-oQ-iT4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="010-Ol-sG4"/>
+                            <constraint firstItem="v1w-SW-NuF" firstAttribute="leading" secondItem="mcI-vv-GjX" secondAttribute="trailing" id="06h-C4-Gha"/>
+                            <constraint firstItem="R5d-J1-m1X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0B7-c5-oFB"/>
+                            <constraint firstItem="v1w-SW-NuF" firstAttribute="width" secondItem="mcI-vv-GjX" secondAttribute="width" id="1V2-AD-J3N"/>
+                            <constraint firstItem="9SW-oQ-iT4" firstAttribute="top" secondItem="mcI-vv-GjX" secondAttribute="bottom" constant="29" id="7Ck-As-Sut"/>
+                            <constraint firstItem="v1w-SW-NuF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7H9-uf-845"/>
+                            <constraint firstItem="v1w-SW-NuF" firstAttribute="leading" secondItem="mcI-vv-GjX" secondAttribute="trailing" id="AeV-Cb-GBi"/>
+                            <constraint firstItem="Wx8-YJ-ScP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="R7n-aa-uPg"/>
+                            <constraint firstItem="esr-FU-mEO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VIB-5y-hX1"/>
+                            <constraint firstItem="mcI-vv-GjX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YA4-cl-0NC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="esr-FU-mEO" secondAttribute="bottom" constant="20" id="ZWc-m5-rHD"/>
+                            <constraint firstItem="v1w-SW-NuF" firstAttribute="top" secondItem="R5d-J1-m1X" secondAttribute="bottom" constant="29" id="ais-py-7Fy"/>
+                            <constraint firstItem="esr-FU-mEO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ak4-11-Q80"/>
+                            <constraint firstItem="R5d-J1-m1X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dek-4f-yim"/>
+                            <constraint firstItem="R5d-J1-m1X" firstAttribute="top" secondItem="Wx8-YJ-ScP" secondAttribute="bottom" constant="29" id="fUf-oK-EXN"/>
+                            <constraint firstItem="v1w-SW-NuF" firstAttribute="height" secondItem="mcI-vv-GjX" secondAttribute="height" id="g4n-lY-yDy"/>
+                            <constraint firstItem="mcI-vv-GjX" firstAttribute="top" secondItem="R5d-J1-m1X" secondAttribute="bottom" constant="29" id="jzq-bN-IVx"/>
+                            <constraint firstItem="9SW-oQ-iT4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="shY-Zl-YkC"/>
+                            <constraint firstItem="Wx8-YJ-ScP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tJs-Vf-hs0"/>
+                            <constraint firstItem="R5d-J1-m1X" firstAttribute="top" secondItem="Wx8-YJ-ScP" secondAttribute="bottom" constant="29" id="vrV-Io-9Cl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="songTitleLabel" destination="R5d-J1-m1X" id="ZK9-O1-I83"/>
+                        <outlet property="songVolumeSlider" destination="9SW-oQ-iT4" id="Xfk-Uo-SLc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

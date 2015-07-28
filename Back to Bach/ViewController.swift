@@ -20,6 +20,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    // MARK: - IBOutlet properties
+    
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var songVolumeSlider: UISlider!
+    
+    // MARK: - IBAction properties
+    
+    @IBAction func playPauseButtonPressed(sender: UIButton) {
+    }
+    @IBAction func stopButtonPressed(sender: UIButton) {
+    }
+    
+    
 }
 
