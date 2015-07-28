@@ -12,6 +12,7 @@
 		655A9B1C1B6727DA00B101BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655A9B1A1B6727DA00B101BA /* Main.storyboard */; };
 		655A9B1E1B6727DA00B101BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655A9B1D1B6727DA00B101BA /* Assets.xcassets */; };
 		655A9B211B6727DA00B101BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655A9B1F1B6727DA00B101BA /* LaunchScreen.storyboard */; };
+		655A9B291B67319900B101BA /* Porno Graffitti - Lack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655A9B281B67319900B101BA /* Porno Graffitti - Lack.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		655A9B1D1B6727DA00B101BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		655A9B201B6727DA00B101BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		655A9B221B6727DA00B101BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655A9B281B67319900B101BA /* Porno Graffitti - Lack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Porno Graffitti - Lack.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				655A9B161B6727DA00B101BA /* AppDelegate.swift */,
 				655A9B181B6727DA00B101BA /* ViewController.swift */,
 				655A9B1A1B6727DA00B101BA /* Main.storyboard */,
+				655A9B281B67319900B101BA /* Porno Graffitti - Lack.mp3 */,
 				655A9B1D1B6727DA00B101BA /* Assets.xcassets */,
 				655A9B1F1B6727DA00B101BA /* LaunchScreen.storyboard */,
 				655A9B221B6727DA00B101BA /* Info.plist */,
@@ -123,6 +126,7 @@
 			files = (
 				655A9B211B6727DA00B101BA /* LaunchScreen.storyboard in Resources */,
 				655A9B1E1B6727DA00B101BA /* Assets.xcassets in Resources */,
+				655A9B291B67319900B101BA /* Porno Graffitti - Lack.mp3 in Resources */,
 				655A9B1C1B6727DA00B101BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

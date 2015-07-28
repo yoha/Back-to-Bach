@@ -43,6 +43,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9SW-oQ-iT4">
                                 <rect key="frame" x="18" y="430" width="564" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="songVolumeSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="W9c-iQ-Rrw"/>
+                                </connections>
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="Wx8-YJ-ScP">
                                 <rect key="frame" x="180" y="49" width="240" height="240"/>
@@ -93,12 +96,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playPauseButton" destination="v1w-SW-NuF" id="sAt-Oa-zwc"/>
                         <outlet property="songTitleLabel" destination="R5d-J1-m1X" id="ZK9-O1-I83"/>
                         <outlet property="songVolumeSlider" destination="9SW-oQ-iT4" id="Xfk-Uo-SLc"/>
+                        <outlet property="stopButton" destination="mcI-vv-GjX" id="nLF-hr-eeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="279" y="536"/>
         </scene>
     </scenes>
 </document>
